@@ -1,12 +1,12 @@
 // Simulated database
 const certificates = [
   {
-    id: "STD123",
+    id: "PAK56LP",
     name: "Ali Khan",
     course: "NEBOSH IGC",
     date: "2025-06-15",
     certNumber: "CERT001",
-    certificateImage: "https://via.placeholder.com/400x300.png?text=Certificate+Ali"
+    certificateImage: "https://ibb.co/DH461nmW"
   },
   {
     id: "STD456",
