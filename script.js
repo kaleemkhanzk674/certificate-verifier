@@ -1,53 +1,40 @@
-// Simulated database
-const certificates = [
+const students = [
   {
-    id: "PAK56LP",
+    id: "CERT001",
     name: "Ali Khan",
     course: "NEBOSH IGC",
     date: "2025-06-15",
-    certNumber: "CERT001",
-    certificateImage: "https://github.com/kaleemkhanzk674/certificate-verifier/blob/main/adg.jpg"
-  },
-  {
-    id: "STD456",
-    name: "Sara Ahmed",
-    course: "IOSH Managing Safely",
-    date: "2025-07-01",
-    certNumber: "CERT002",
-    certificateImage: "https://ibb.co/DH461nmW"
+    certificateNumber: "CERT001",
+    certificateImage: "https://raw.githubusercontent.com/kaleemkhanzk674/certificate-verifier/main/cert1.png"
   }
 ];
 
 function verifyCertificate() {
   const input = document.getElementById("searchInput").value.trim();
-  const resultDiv = document.getElementById("certificateData");
   const resultSection = document.getElementById("result");
   const errorSection = document.getElementById("error");
+  const dataContainer = document.getElementById("certificateData");
+  const imageContainer = document.getElementById("certificateImage");
 
-  const cert = certificates.find(c =>
-    c.id.toLowerCase() === input.toLowerCase() ||
-    c.certNumber.toLowerCase() === input.toLowerCase()
+  const matchedStudent = students.find(
+    (s) => s.id === input || s.certificateNumber === input
   );
 
-  if (cert) {
-    errorSection.classList.add("hidden");
-    resultSection.classList.remove("hidden");
-
-    resultDiv.innerHTML = `
-      <h3>Certificate Found</h3>
-      <p><strong>Name:</strong> ${cert.name}</p>
-      <p><strong>Course:</strong> ${cert.course}</p>
-      <p><strong>Issue Date:</strong> ${cert.date}</p>
-      <p><strong>Certificate Number:</strong> ${cert.certNumber}</p>
-      <img src="${cert.certificateImage}" alt="Certificate Image" width="400"/>
+  if (matchedStudent) {
+    dataContainer.innerHTML = `
+      <p><strong>Name:</strong> ${matchedStudent.name}</p>
+      <p><strong>Course:</strong> ${matchedStudent.course}</p>
+      <p><strong>Issue Date:</strong> ${matchedStudent.date}</p>
+      <p><strong>Certificate Number:</strong> ${matchedStudent.certificateNumber}</p>
     `;
+
+    imageContainer.src = matchedStudent.certificateImage;
+    imageContainer.style.display = "block";
+
+    resultSection.classList.remove("hidden");
+    errorSection.classList.add("hidden");
   } else {
     resultSection.classList.add("hidden");
     errorSection.classList.remove("hidden");
   }
 }
-
-// Dark/Light Mode Toggle
-document.getElementById("toggleMode").addEventListener("click", () => {
-  document.body.classList.toggle("dark-mode");
-});
