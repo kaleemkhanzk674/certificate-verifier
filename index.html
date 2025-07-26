@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Certificate Verifier</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🎓 Certificate Verifier</h1>
+    <button id="toggleMode">🌙</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Verify your certificate below</h2>
+      <input type="text" id="searchInput" placeholder="Enter Certificate Number or Student ID" />
+      <button onclick="verifyCertificate()">Verify</button>
+    </section>
+
+    <section id="result" class="hidden">
+      <div id="certificateData"></div>
+    </section>
+
+    <section id="error" class="hidden error">Certificate not found. Please try again.</section>
+  </main>
+
+  <footer>
+    <p>© 2025 Kaleem Ullah | Contact: kaleemkhanzk@gmail.com</p>
+    <div class="socials">
+      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" /></a>
+      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="GitHub" /></a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
