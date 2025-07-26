@@ -6,7 +6,7 @@ const certificates = [
     course: "NEBOSH IGC",
     date: "2025-06-15",
     certNumber: "CERT001",
-    certificateImage: "https://ibb.co/DH461nmW"
+    certificateImage: "https://github.com/kaleemkhanzk674/certificate-verifier/blob/main/adg.jpg"
   },
   {
     id: "STD456",
