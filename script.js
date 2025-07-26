@@ -14,7 +14,7 @@ const certificates = [
     course: "IOSH Managing Safely",
     date: "2025-07-01",
     certNumber: "CERT002",
-    certificateImage: "https://via.placeholder.com/400x300.png?text=Certificate+Sara"
+    certificateImage: "https://ibb.co/DH461nmW"
   }
 ];
 
