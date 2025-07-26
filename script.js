@@ -5,7 +5,7 @@ const students = [
     course: "NEBOSH IGC",
     date: "2025-06-15",
     certificateNumber: "CERT001",
-    certificateImage: "https://raw.githubusercontent.com/kaleemkhanzk674/certificate-verifier/main/cert1.png"
+    certificateImage: "Pictures/cert1.jpg"
   }
 ];
 
